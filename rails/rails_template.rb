@@ -15,12 +15,6 @@ end
 
 generate :authenticated, "user sessions --rspec"
 
-route "map.signup '/signup', :controller => 'users',   :action => 'new'"
-route "map.login  '/login',  :controller => 'session', :action => 'new'"
-route "map.logout '/logout', :controller => 'session', :action => 'destroy'"
-
-rake "db:migrate"
-
 # hoptoad
 plugin 'hoptoad_notifier', :git => "git://github.com/thoughtbot/hoptoad_notifier.git"
 
@@ -29,21 +23,6 @@ HoptoadNotifier.configure do |config|
   config.api_key = 'CHANGE_THIS_TO_YOUR_HOPTOAD_API_KEY'
 end
 END
-
-# jquery
-run "curl -L http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js > public/javascripts/jquery.js"
-run "curl -L http://jqueryjs.googlecode.com/svn/trunk/plugins/form/jquery.form.js > public/javascripts/jquery.form.js"
-
-# Set up session store initializer
-initializer 'session_store.rb', <<-END
-ActionController::Base.session = {
-  :key         => "_\#{File.basename(RAILS_ROOT)}_session",
-  :secret      => '#{(1..128).map { |x| (65 + rand(26)).chr }.join}'
-}
-ActionController::Base.session_store = :active_record_store
-END
-
-rake "db:sessions:create"
 
 # gitignore
 run "touch tmp/.gitignore log/.gitignore vendor/.gitignore"
@@ -68,7 +47,7 @@ run "rm public/index.html"
 run "rm public/favicon.ico"
 run "rm -rf test"
 
-git
+# git
 git :init
 git :add => "."
 git :commit => "-a -m 'Initial commit'"
