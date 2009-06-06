@@ -32,6 +32,7 @@
   alias mod="./script/generate model"
   alias nuke="rake db:drop:all;rake db:create:all;dbm"
   alias rb="rake db:rollback"
+  alias redo="rake db:migrate:redo"
   alias reset="rake db:reset"
   alias rfix="rake spec:db:fixtures:load"
   alias scaf="./script/generate scaffold"
@@ -89,6 +90,8 @@
   alias gphm="git push heroku master"
   alias h="heroku"
   alias hdbm="h rake db:migrate"
+  alias hdbpull="h db:pull sqlite://db/development.sqlite3"
+  alias hdbpush="h db:push"
   alias hc="h console"
 
 # git
@@ -101,6 +104,7 @@
   alias gpom="git push origin master"
   alias gcl="git clone"
   alias gco="git checkout"
+  alias gcob="git checkout -b"
   alias gl="git log"
   alias gm="git merge"
   alias gmv="git mv"
@@ -113,13 +117,17 @@
   alias gsr="git svn rebase"
   alias gst="git status"
   alias master="gco master"
-  alias prod="gco prod"
-  alias stag="gco stag"
 
 # bash profile
   alias ebash="mate -w ~/.bash_login && . ~/.bash_login"
 
 # go to my projects
+  alias mi="cd ~/work/mightyo/"
+  alias in="cd ~/work/inboxtxt/"
+  alias todo="m ~/work/todolist/public/todo.txt"
+  alias pushtodo="cd ~/work/todolist/; git commit -am 'todo'; gphm"
+  alias xvx="cd ~/work/veganstraightedge/"
+  alias dog="cd ~/work/dogstatsapp/"
   alias bfm="cd ~/work/beaconfm/"
   alias deva="cd ~/work/deva/"
   alias alt="cd ~/work/altrooist/"
