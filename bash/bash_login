@@ -7,15 +7,23 @@
   export EDITOR="mate -w"
   export GIT_SSH="/usr/bin/ssh"
   export PS1='\[\033]0;\w\007\][`git branch 2>&1 | grep "*" | cut -c3-`] \w\\$ '
-  
-  
+
+
   # toot from the command line
   function tweet {
     curl -n -d status="$*" https://twitter.com/statuses/update.xml --insecure &> /dev/null
     echo "tweet'd"
   }
-  
-  
+
+# misc
+  alias c="cheat"
+  alias a="autotest"
+  alias table="ruby ~/bin/table_maker.rb"
+  alias today="ruby -rdate -e 'puts((Date.today - Date.new(2008,12,31)))'"
+  alias day="ruby -rdate -e 'puts((Date.today - Date.new(2009,6,12)) + 1)'"
+  alias days="ruby -rdate -e '(Date.new(2009, 6, 12)..Date.today).each_with_index { |d, i| puts(%W[#{d}___#{i+1}]) }'"
+  alias vimeo="ruby ~/bin/vimeo_uploader.rb"
+
 # unix navigating
   alias la="ls -la"
   alias ll="ls -l"
@@ -50,48 +58,12 @@
   alias int="rake test:integration"
   alias prep="rake db:test:prepare"
 
-# merb
-  alias m3="merb -p 3000"
-
 # ruby
   alias mg="mongrel_rails start"
   alias r="rake"
   alias rtt="rake -T"
   alias sgi="sudo gem install"
-  
-# adready
-  alias fix="rake fixtures:cache:clear"
-  alias mount="mount rainier.local:/home/prod/creative_file public/images/creative_file"
-  alias rl="RAILS_ENV=live"
-  alias ccr="FORCED=campaign_creative_results"
-  alias live="rake live:data:update"
-  alias adready="sup; reprep; ann; cl"
-  alias adreadylong="adready; live;"
-  alias redbm="rake db:remigrate"
-  alias reprep="redbm;prep"
-  alias preptest="reprep;test"
-  alias cotrunk="svn co svn://rainier.local/vendo/trunk"
-  alias mergetrunk="rake svnmerge:merge --trace"
-  alias citrunk="rake svnmerge:commit"
-  alias rmg="RAILS_ENV=development_prod VENDO_ENV=vendo_production mongrel_rails start"
-  alias mac="rake mac:mount:creatives"
 
-# misc
-  alias fc="ruby ~/bin/octopod.es/friend_count.rb"
-  alias fcv="fc veganstraightedge"
-  alias go="ruby ~/bin/octopod.es/game_octopod.rb"
-  alias c="cheat"
-  alias mydb="mysqladmin -u root create"
-  alias my="mysql -u root"
-  alias a="autotest"
-  alias comics="ruby ~/bin/the_dreaming/new_comics.rb"
-  alias table="ruby ~/bin/table_maker.rb"
-  alias today="ruby -rdate -e 'puts((Date.today - Date.new(2008,12,31)))'"
-  alias day="ruby -rdate -e 'puts((Date.today - Date.new(2009,6,12)) + 1)'"
-  alias days="ruby -rdate -e '(Date.new(2009, 6, 12)..Date.today).each_with_index { |d, i| puts(%W[#{d}___#{i+1}]) }'"
-  
-  alias vimeo="ruby ~/bin/vimeo_uploader.rb"
-  
 # textmate
   alias e="mate ."
   alias m="mate"
@@ -104,6 +76,29 @@
   alias hdbpull="h db:pull sqlite://db/development.sqlite3"
   alias hdbpush="h db:push"
   alias hc="h console"
+
+# bash profile
+  alias ebash="mate -w ~/.bash_login && . ~/.bash_login"
+
+# go to my projects
+  alias mi="cd ~/Sites/mightyo/"
+  alias no="cd ~/Sites/nokogiri_website/"
+  alias in="cd ~/Sites/inboxtxt/"
+  alias xvx="cd ~/Sites/veganstraightedge/"
+  alias dog="cd ~/Sites/dogstatsapp/"
+  alias bfm="cd ~/Sites/beaconfm/"
+  alias alt="cd ~/Sites/altrooist/"
+  alias cbdb="cd ~/Sites/cbdb/"
+  alias capes="cd ~/Sites/capes/trunk/"
+  alias lyl="cd ~/Sites/listyourlist/"
+  alias de="cd ~/Sites/dateedge/"
+  alias zd="cd ~/Sites/zinedistro/"
+  alias tra="cd ~/Sites/theresistancearmy/"
+  alias audio="cd ~/Sites/audio/"
+  alias rt="cd ~/Sites/roadtrip/"
+  alias srb="cd ~/Sites/seattlerb/"
+  alias att="cd ~/Sites/attlesonduke/"
+  alias work="cd ~/Sites"
 
 # git
   alias gd="git diff"
@@ -128,33 +123,6 @@
   alias gsr="git svn rebase"
   alias gst="git status"
   alias master="gco master"
-
-# bash profile
-  alias ebash="mate -w ~/.bash_login && . ~/.bash_login"
-
-# todo
-  alias todo="m -w ~/Sites/todolist/public/todo.txt && cd ~/Sites/todolist/; git commit -am 'todo'; gphm"
-
-# go to my projects
-  alias mi="cd ~/Sites/mightyo/"
-  alias no="cd ~/Sites/nokogiri_website/"
-  alias in="cd ~/Sites/inboxtxt/"
-  alias xvx="cd ~/Sites/veganstraightedge/"
-  alias dog="cd ~/Sites/dogstatsapp/"
-  alias bfm="cd ~/Sites/beaconfm/"
-  alias deva="cd ~/Sites/deva/"
-  alias alt="cd ~/Sites/altrooist/"
-  alias cbdb="cd ~/Sites/cbdb/"
-  alias capes="cd ~/Sites/capes/trunk/"
-  alias lyl="cd ~/Sites/listyourlist/"
-  alias de="cd ~/Sites/dateedge/"
-  alias zd="cd ~/Sites/zinedistro/"
-  alias tra="cd ~/Sites/theresistancearmy/"
-  alias audio="cd ~/Sites/audio/"
-  alias rt="cd ~/Sites/roadtrip/"
-  alias srb="cd ~/Sites/seattlerb/"
-  alias att="cd ~/Sites/attlesonduke/"
-  alias work="cd ~/Sites"
 
 # svn
   alias sad='svn status | grep "^\?" | awk "{print \$2}" | xargs svn add'
