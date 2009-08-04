@@ -3,11 +3,18 @@
   export PATH="/usr/local/git/bin:$PATH"
   export PATH="/Library/PostgreSQL/8.3/bin:$PATH"
   export MANPATH="/usr/local/git/man:$MANPATH"
-  export P4CONFIG=.p4config
   export SVN_EDITOR="mate -w"
   export EDITOR="mate -w"
   export GIT_SSH="/usr/bin/ssh"
   export PS1='\[\033]0;\w\007\][`git branch 2>&1 | grep "*" | cut -c3-`] \w\\$ '
+  
+  
+  # toot from the command line
+  function tweet {
+    curl -n -d status="$*" https://twitter.com/statuses/update.xml --insecure &> /dev/null
+    echo "tweet'd"
+  }
+  
   
 # unix navigating
   alias la="ls -la"
@@ -70,16 +77,20 @@
   alias mac="rake mac:mount:creatives"
 
 # misc
-  alias fc="ruby ~/scripts/octopod.es/friend_count.rb"
+  alias fc="ruby ~/bin/octopod.es/friend_count.rb"
   alias fcv="fc veganstraightedge"
-  alias go="ruby ~/scripts/octopod.es/game_octopod.rb"
+  alias go="ruby ~/bin/octopod.es/game_octopod.rb"
   alias c="cheat"
   alias mydb="mysqladmin -u root create"
   alias my="mysql -u root"
   alias a="autotest"
-  alias comics="ruby ~/scripts/the_dreaming/new_comics.rb"
-  alias table="ruby ~/scripts/table_maker.rb"
-  alias today="ruby ~/scripts/day_of_the_year.rb"
+  alias comics="ruby ~/bin/the_dreaming/new_comics.rb"
+  alias table="ruby ~/bin/table_maker.rb"
+  alias today="ruby -rdate -e 'puts((Date.today - Date.new(2008,12,31)))'"
+  alias day="ruby -rdate -e 'puts((Date.today - Date.new(2009,6,12)) + 1)'"
+  alias days="ruby -rdate -e '(Date.new(2009, 6, 12)..Date.today).each_with_index { |d, i| puts(%W[#{d}___#{i+1}]) }'"
+  
+  alias vimeo="ruby ~/bin/vimeo_uploader.rb"
   
 # textmate
   alias e="mate ."
@@ -121,25 +132,29 @@
 # bash profile
   alias ebash="mate -w ~/.bash_login && . ~/.bash_login"
 
+# todo
+  alias todo="m -w ~/Sites/todolist/public/todo.txt && cd ~/Sites/todolist/; git commit -am 'todo'; gphm"
+
 # go to my projects
-  alias mi="cd ~/work/mightyo/"
-  alias in="cd ~/work/inboxtxt/"
-  alias todo="m ~/work/todolist/public/todo.txt"
-  alias pushtodo="cd ~/work/todolist/; git commit -am 'todo'; gphm"
-  alias xvx="cd ~/work/veganstraightedge/"
-  alias dog="cd ~/work/dogstatsapp/"
-  alias bfm="cd ~/work/beaconfm/"
-  alias deva="cd ~/work/deva/"
-  alias alt="cd ~/work/altrooist/"
+  alias mi="cd ~/Sites/mightyo/"
+  alias no="cd ~/Sites/nokogiri_website/"
+  alias in="cd ~/Sites/inboxtxt/"
+  alias xvx="cd ~/Sites/veganstraightedge/"
+  alias dog="cd ~/Sites/dogstatsapp/"
+  alias bfm="cd ~/Sites/beaconfm/"
+  alias deva="cd ~/Sites/deva/"
+  alias alt="cd ~/Sites/altrooist/"
   alias cbdb="cd ~/Sites/cbdb/"
-  alias capes="cd ~/work/capes/trunk/"
-  alias lyl="cd ~/work/listyourlist/"
-  alias de="cd ~/work/dateedge/"
-  alias zd="cd ~/work/zinedistro/"
-  alias tra="cd ~/work/theresistancearmy/"
-  alias srb="cd ~/work/seattlerb/"
-  alias att="cd ~/work/attlesonduke/"
-  alias work="cd ~/work"
+  alias capes="cd ~/Sites/capes/trunk/"
+  alias lyl="cd ~/Sites/listyourlist/"
+  alias de="cd ~/Sites/dateedge/"
+  alias zd="cd ~/Sites/zinedistro/"
+  alias tra="cd ~/Sites/theresistancearmy/"
+  alias audio="cd ~/Sites/audio/"
+  alias rt="cd ~/Sites/roadtrip/"
+  alias srb="cd ~/Sites/seattlerb/"
+  alias att="cd ~/Sites/attlesonduke/"
+  alias work="cd ~/Sites"
 
 # svn
   alias sad='svn status | grep "^\?" | awk "{print \$2}" | xargs svn add'
