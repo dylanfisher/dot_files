@@ -8,13 +8,6 @@
   export GIT_SSH="/usr/bin/ssh"
   export PS1='\[\033]0;\w\007\][`git branch 2>&1 | grep "*" | cut -c3-`] \w\\$ '
 
-
-  # toot from the command line
-  function tweet {
-    curl -n -d status="$*" https://twitter.com/statuses/update.xml --insecure &> /dev/null
-    echo "tweet'd"
-  }
-
 # misc
   alias c="cheat"
   alias a="autotest"
@@ -51,6 +44,8 @@
   alias reset="rake db:reset"
   alias rfix="rake spec:db:fixtures:load"
   alias scaf="./script/generate scaffold"
+  alias mg="mongrel_rails start"
+  alias ss="./script/server webrick"
 
   alias test="rake test"
   alias unit="rake test:units"
@@ -59,7 +54,6 @@
   alias prep="rake db:test:prepare"
 
 # ruby
-  alias mg="mongrel_rails start"
   alias r="rake"
   alias rtt="rake -T"
   alias sgi="sudo gem install"
@@ -82,9 +76,13 @@
 
 # go to my projects
   alias mi="cd ~/Sites/mightyo/"
+  alias sbb="cd ~/Sites/sbb/"
+  alias ltt="cd ~/Sites/lessthanthree/"
+  alias diy="cd ~/Sites/diy/"
   alias no="cd ~/Sites/nokogiri_website/"
   alias in="cd ~/Sites/inboxtxt/"
   alias xvx="cd ~/Sites/veganstraightedge/"
+  alias todo="cd ~/Documents/todo/; m -w public/inbox.txt; gadd; gcim 'todo'; gphm"
   alias dog="cd ~/Sites/dogstatsapp/"
   alias bfm="cd ~/Sites/beaconfm/"
   alias alt="cd ~/Sites/altrooist/"
@@ -94,10 +92,12 @@
   alias de="cd ~/Sites/dateedge/"
   alias zd="cd ~/Sites/zinedistro/"
   alias tra="cd ~/Sites/theresistancearmy/"
-  alias audio="cd ~/Sites/audio/"
+  alias au="cd ~/Sites/audio/"
+  alias bks="cd ~/Sites/bookis/"
   alias rt="cd ~/Sites/roadtrip/"
   alias srb="cd ~/Sites/seattlerb/"
   alias att="cd ~/Sites/attlesonduke/"
+  alias spidey="cd ~/Sites/spidey/"
   alias work="cd ~/Sites"
 
 # git
@@ -123,6 +123,9 @@
   alias gsr="git svn rebase"
   alias gst="git status"
   alias master="gco master"
+  
+  alias notes="gadd; gcim 'notes'"
+  alias hours="gadd; gcim 'hours'"
 
 # svn
   alias sad='svn status | grep "^\?" | awk "{print \$2}" | xargs svn add'
