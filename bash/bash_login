@@ -128,6 +128,7 @@
   alias sup="svn up"
 
 # go to my projects
+  alias apps="cd ~/Dropbox/Sites"
   alias att="cd ~/Sites/attlesonduke/"
   alias au="cd ~/Sites/audio/"
   alias bfm="cd ~/Sites/beaconfm/"
@@ -162,7 +163,6 @@
   alias tra="cd ~/Sites/theresistancearmy/"
   alias tu="cd ~/Sites/tunein/"
   alias tv="cd ~/Sites/screencasty/"
-  alias work="cd ~/Dropbox/Sites"
   alias xvx="cd ~/Sites/theveganstraightedge/"
   alias zd="cd ~/Sites/zinedistro/"
 
