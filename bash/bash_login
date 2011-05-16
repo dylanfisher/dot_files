@@ -16,7 +16,9 @@
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # Load RVM into a shell session *as a function*  
 
 # misc
-  alias tab="~/bin/tab"
+  alias tab='echo "cd `pwd`" | pbcopy'
+
+
   alias 2ogv="ffmpeg2theora"
   alias c="cheat"
   alias a="autotest"
