@@ -1,0 +1,355 @@
+Software Update:
+-  > "Software Update..."
+- click "Install # Items"
+
+System Preferences:
+- View > Organize Alphabetically
+
+  Bluetooth:
+  - uncheck "On"
+  - uncheck "Show Bluetooth status in the menu bar"
+
+  Date & Time:
+    Clock:
+    - uncheck "Show date and time in menu bar:"
+
+  Desktop & Screen Saver:
+  - Solid Colors : black
+  - Screensaver : Flurry
+
+  Displays:
+  - uncheck "Automatically adjust brightness"
+
+  iCloud:
+  - enter credentials
+
+  Keyboard:
+  - Key Repeat : Fast
+  - Delay Until Repeat : 5 toward Short
+    Keyboard Shortcuts:
+    - uncheck "Mission Control"
+
+      Application Shortcuts:
+      - Remove Trailing Spaces in Document / Selection : control option command space
+
+  Mail, Contacts & Calendars:
+  - add veganstraightedge@gmail.com : mail, calendars, chat
+
+  Sharing:
+  - Computer Name: hawaii
+
+  Software Update:
+  - change "Weekly" to "Daily"
+
+  Sound:
+  - uncheck "Play user interface effects"
+  - uncheck "Play feedback when volume is changed"
+  - uncheck "Show volume in menu bar"
+
+  Spotlight:
+  - uncheck "Spotlight menu keyboard shortcut:"
+  - uncheck "Spotlight window keyboard shortcut:"
+
+  Trackpad:
+  - check "Tap to click"
+
+  Users & Groups:
+  - change avatar to http://a2.twimg.com/profile_images/1266963198/avatar_a_sqaure.jpg
+
+App Store:
+  Updates:
+  - install all
+
+  Purchased:
+  - install:
+  Xcode
+  Fantastical
+  Marked
+  Sparrow
+  Reeder
+  Carousel
+  Stuffit Expander
+  PNG Compressor
+  DateLine
+  QuickCursor
+  Skitch
+  Acorn
+  Name Mangler
+  Transmit
+  Things
+  Cinch
+  Kindle
+  LittleSnapper
+  Twitter
+
+  - move all to ~/Applications
+  - run "/Applications/Install Xcode.app"
+
+App Setup:
+  Sparrow:
+  - enter credentials
+  - Connect to Facebook
+
+  Cinch:
+  - click "Continue"
+  - click "Enable Now"
+  - check "Start Cinch automatically at login"
+  - click "Continue"
+  - click "Finish"
+
+
+
+Downloads:
+  1Password:
+  - https://agilebits.com/downloads/1Password/Mac
+  - mv "~/Downloads/1Password.app" to "~/Applications/1Password.app"
+
+  Quicksilver:
+  - http://qs0.qsapp.com/plugins/download.php
+  - unarchive "Quicksilver B63.dmg"
+  - mv "/Volumes/Quicksilver/Quicksilver.app" to "~/Application/Quicksilver.app"
+
+  TextMate:
+  - http://updates.textmate.org/Application/TextMate_r8930.tbz
+  - unarchive
+  - move to ~/Applications
+  - license from email
+
+  Inconsolata G:
+  - http://www.fantascienza.net/leonardo/ar/inconsolatag/inconsolata-g_font.zip
+  - unarchive
+  - open ~/Downloads/inconsolata-g_font/Inconsolata-g.otf to install it in FontBook
+
+  FuzzyClock:
+  - http://www.objectpark.org/Releases/FuzzyClock-1-2-10.dmg
+  - unarchive
+  - mv "/Volumes/FuzzyClock/FuzzyClock.app" to "~/Applications/FuzzyClock.app"
+
+  SlimBatteryMonitor:
+  - http://www.orange-carb.org/SBM/downloads.html
+  - unarchive
+  - mv "/Volumes/SlimBatteryMonitor 1.5/SlimBatteryMonitor.app" to "~/Applications/SlimBatteryMonitor.app"
+
+  homebrew:
+  - /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
+
+  git:
+  - brew install git
+
+  gems:
+  - sudo gem install heroku
+  - sudo gem install bundler
+
+  bash:
+  - curl https://raw.github.com/veganstraightedge/dot_files/master/bash/bash_login > ~/.bash_login
+  - source ~/.bash_login
+
+  ssh:
+  - TODO maybe pull this from Dropbox?
+
+  Dropbox:
+  - https://www.dropbox.com/download?plat=mac
+  - unarchive
+  - mv "/Volumes/Dropbox/Dropbox.app" to "~/Applications/Dropbox.app"
+
+  Home Hidden Files:
+  - TODO
+
+
+
+
+Files and Folders:
+- empty ~/Downloads
+- empty ~/Documents
+- mkdir ~/Applications
+
+
+Dock:
+- remove everything
+- turn on autohide
+
+
+Preferences:
+  iChat:
+  - uncheck "View > Use Groups"
+  - uncheck "View > Show Offline Buddies"
+
+    Accounts:
+	- gyromx:aim
+	- veganstraightedge@gmail.com:gtalk
+	- veganstraightedge@chat.facebook.com:jabber
+  
+
+  Reeder:
+  - enter credentials
+  - make Reeder the default RSS reader
+
+  Quicksilver:
+    Preferences:
+    - check "Start at login"
+    - uncheck "Show icon in dock"
+    - check "Show icon in menu bar"
+    - check "Include access to full contents of menu bar"
+    - select "Daily" from "Check for updates:"
+    - check "Download updates in the background"
+    - check "Install updates without asking"
+
+    Plug-ins:
+    - check "Calculator Module"
+    - check "Command Line Tool (qs)"
+    - check "Dictionary Module"
+    - check "Disk Image Support"
+    - check "E-mail Support"
+    - check "Displays Module"
+    - check "Event Triggers"
+    - check "Extra Scripts"
+    - check "File Attribution Actions"
+    - check "File Compression Module"
+    - check "Screen Capture Actions"
+    - check "Services Menu Module"
+    - check "Unit Conversion Module"
+    - check "Web Search Module"
+
+
+  Finder:
+    View > Show View Options:
+    - Icon size: 128 x 128
+    - Grid spacing: maximum
+    - Text size: 16pt
+    - Sort by: Snap to Grid
+    - Use as Defaults
+
+    General:
+    - select "s" from "New Finder windows show:"
+
+    Sidebar:
+    - uncheck everything
+
+    Advanced:
+    - check "Show all filename extensions"
+    - uncheck "Show warning before changing an extension"
+    - uncheck "Show warning before emptying the Trash"
+    - select "Search the Current Folder" from "When performing a search:"
+
+  Dock:
+  - defaults write com.apple.dock pinning -string start
+  - defaults write com.apple.dock no-glass -boolean YES
+  - killall Dock
+
+  TextMate:
+
+
+  - tab size : 2
+  - indent using : spaces
+  - view > fonts > show fonts : Inconsolata-g 18pt
+    Preferences:
+      Projects:
+      - uncheck "Folders on top"
+      - check "All filename extensions"
+      Variables:
+      - uncheck "TM_HG"
+      Software Update:
+      - select "Beta Builds" from "Software Update: Watch for:"
+      - check "Include anonymous usage info"
+      - click "Check Now"
+      - click "Install & Relaunch"
+      Terminal:
+      - click "Install"
+      Bundles:
+      - uncheck "Apache"
+      - uncheck "C"
+      - uncheck "Mail"
+      - uncheck "Make"
+      - uncheck "Mercurial"
+      - uncheck "Objective-C"
+      - uncheck "PHP"
+      - uncheck "Property List"
+      - uncheck "Python"
+      - uncheck "SQL"
+      - uncheck "Subversion"
+      - uncheck "Textile"
+
+      - check "CoffeeScript"
+      - check "CTags"
+      - check "HTML Revised"
+      - check "iCalendar"
+      - check "JavaScript jQuery"
+      - check "Licenses"
+      - check "Ruby Haml"
+      - check "Ruby on Rails"
+      - check "Ruby Sass"
+      - check "S5 Slide Show"
+      - check "TaskMate"
+      - check "Tasks"
+      - check "YAML"
+
+  Terminal:
+    Settings:
+      - click Pro
+      - click "Default"
+      - check "Antialias text"
+      - check "Use bright colors for bold text"
+      - click "Change..." : Inconsolata-g 18pt
+
+      Shell:
+      - check "Run command"
+      - enter "clear"
+
+      Keyboard:
+      - check "Use option as meta key"
+
+
+  Safari:
+  - View > Show Status Bar
+
+    General:
+    - Homepage: blank
+    - uncheck 'Open "safe" files after downloading'
+
+    Bookmarks:
+    - uncheck "Include Top Sites"
+    - uncheck "Include Address Book"
+    - uncheck "Include Bonjour"
+
+    RSS:
+    - select "Reeder" from "Default RSS reader:"
+    - uncheck "Bookmarks bar" from "Automatically update articles in:"
+
+    Autofill:
+    - check "User names and passwords"
+
+    Security:
+    - uncheck "Java"
+
+    Advanced:
+    - check "Show Develop menu in menu bar"
+
+    Carousel:
+    - uncheck "Growl"
+    - uncheck "Icon Badge"
+
+    Twitter:
+      General:
+      - Global show/hide: control option space
+      - Global new tweet: control option n
+      - select "18pt" from "Font size:"
+      - check "Open links in background"
+
+      Notifications:
+      - select "None" from "Tweets"
+
+      Accounts:
+      - veganstraightedge
+      - rubinius
+      - gopumago
+      - farmhouse
+      - civthedog
+
+    Fantastical:
+    - Keyboard shortcut: control option command c
+    - uncheck "Play user interface sounds"
+
+
+  iCal:
+  - open to update calendars
+
