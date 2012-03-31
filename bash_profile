@@ -62,7 +62,7 @@
 
 # textmate
   alias e="mate ."
-  alias er="m app db public test features config lib Gemfile"
+  alias er="m app db public test features config lib Gemfile Procfile"
   alias M="m"
   alias m="mate"
 
@@ -119,9 +119,12 @@
 # go to my projects
   alias drop="cd   ~/Dropbox"
   alias work="cd   ~/Dropbox/Projects"
+
   alias jruby="cd  ~/Dropbox/Projects/jruby"
+
   alias oso="cd    ~/Dropbox/Projects/opensourceoffsets/opensourceoffsets.org"
-  alias audio="cd     ~/Dropbox/Projects/heroku/audio/"
+
+  alias audio="cd  ~/Dropbox/Projects/heroku/audio/"
   alias cas="cd    ~/Dropbox/Projects/heroku/cascadiaruby/"
   alias cbdb="cd   ~/Dropbox/Projects/heroku/cbdb/"
   alias de="cd     ~/Dropbox/Projects/heroku/dateedge/"
@@ -134,18 +137,19 @@
   alias lt3="cd    ~/Dropbox/Projects/heroku/lessthanthree/"
   alias ltt="lt3"
   alias lyl="cd    ~/Dropbox/Projects/heroku/listyourlist/"
-  alias mi="cd     ~/Dropbox/Projects/heroku/mightyo/"
-  alias nomore="cd ~/Dropbox/Projects/veganstraightedge/nomoresharecropping.org/"
-  alias rbxday="cd ~/Dropbox/Projects/rubinius/rbxday"
   alias rd="cd     ~/Dropbox/Projects/heroku/razzledazzleit/"
   alias resume="cd ~/Dropbox/Projects/heroku/iamshanebecker/"
   alias rt="cd     ~/Dropbox/Projects/heroku/roadtrip/"
-  alias ru="cd     ~/Dropbox/Projects/rubinius/"
   alias sbb="cd    ~/Dropbox/Projects/heroku/sbbme/"
   alias sbbme="cd  ~/Dropbox/Projects/heroku/sbbme/"
   alias sm="cd     ~/Dropbox/Projects/heroku/feedmeseemore/"
   alias tj="cd     ~/Dropbox/Projects/heroku/tjnelsonjr/"
   alias tra="cd    ~/Dropbox/Projects/heroku/theresistancearmy/"
   alias tv="cd     ~/Dropbox/Projects/heroku/screencasty/"
-  alias xvx="cd    ~/Dropbox/Projects/veganstraightedge/"
   alias zd="cd     ~/Dropbox/Projects/heroku/zinedistro/"
+
+  alias xvx="cd    ~/Dropbox/Projects/veganstraightedge/"
+  alias nomore="cd ~/Dropbox/Projects/veganstraightedge/nomoresharecropping.org/"
+
+  alias ru="cd     ~/Dropbox/Projects/rubinius/"
+  alias rbxday="cd ~/Dropbox/Projects/rubinius/rbxday"
