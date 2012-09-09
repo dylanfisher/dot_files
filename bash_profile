@@ -1,3 +1,9 @@
+# dateedge environment variables
+  export DXE_TWITTER_CONSUMER_KEY="QDDOOe9hyOxTSDINlJXWJw"
+  export DXE_TWITTER_CONSUMER_SECRET="RT3qJftzq2BldCTH3j7GWkEyQCXPi2IXIW54zEwDC8"
+  export DXE_FACEBOOK_CONSUMER_KEY="9fbdd523f0dd03126171f6ca3218c454"
+  export DXE_FACEBOOK_CONSUMER_SECRET="98552a3dc99c853b0381f4952a4eca57"
+
 # path and shell vars
   export PATH="/Library/PostgreSQL/8.3/bin:$PATH"
   export PATH="/usr/local/git/bin:$PATH"
@@ -11,10 +17,6 @@
   export PS1='\[\033]0;\w\007\][`git branch 2>&1 | grep "*" | cut -c3-`] \w: '
 
   # source /usr/local/git/contrib/completion/git-completion.bash
-
-  # uncomment when RVM is needed
-  # Load RVM into a shell session *as a function*
-  # [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # less than three
   alias bp="book_publisher"
@@ -40,6 +42,8 @@
   alias .....="cd ../../../.."
 
 # rails
+  alias p3="puma -p 3000"
+  alias p4="puma -p 4000"
   alias be="bundle exec"
   alias cl="rake log:clear"
   alias clone="rake db:test:clone"
@@ -50,7 +54,6 @@
   alias dbmd="rake db:migrate:down"
   alias fun="rake test:functionals"
   alias int="rake test:integration"
-  alias mg="mongrel_rails start"
   alias nuke="rake db:drop:all;rake db:create:all;dbm"
   alias prep="rake db:test:prepare"
   alias r="rails"
@@ -59,6 +62,11 @@
   alias seed="rake db:seed"
   alias test="rake test"
   alias unit="rake test:units"
+
+# mongo
+  alias mstart="mongod run --config /usr/local/etc/mongod.conf"
+  # alias mstart='mongod --fork --config /usr/local/Cellar/mongodb/1.8.1-x86_64/mongod.conf --logpath /usr/local/var/log/mongodb/mongodb.log --pidfilepath /usr/local/var/log/mongodb/mongod.pid'
+  # alias mstop='kill `cat /usr/local/var/log/mongodb/mongod.pid`'
 
 # textmate
   alias e="mate ."
@@ -116,6 +124,16 @@
   alias u="gx-publish"
   alias gpog="git push origin gh-pages"
 
+# farmhouse
+  alias tix="cd /Users/s/dropbox/projects/heroku/farmhouse/app/views/layouts"
+
+# homesteading
+  alias hstodo=" m ~/Dropbox/Projects/homesteading/todo/README.md"
+  alias hshub=" cd ~/Dropbox/Projects/homesteading/homesteading-hub"
+  alias hsfeed="cd ~/Dropbox/Projects/homesteading/homesteading-feed"
+  alias hsart=" cd ~/Dropbox/Projects/homesteading/homesteading-article"
+  alias hsnote="cd ~/Dropbox/Projects/homesteading/homesteading-note"
+
 # go to my projects
   alias drop="cd   ~/Dropbox"
   alias work="cd   ~/Dropbox/Projects"
@@ -124,8 +142,11 @@
 
   alias oso="cd    ~/Dropbox/Projects/opensourceoffsets/opensourceoffsets.org"
 
+  alias yer="cd    ~/Dropbox/Projects/yerdle/yerdle"
+
+
   alias audio="cd  ~/Dropbox/Projects/heroku/audio/"
-  alias cas="cd    ~/Dropbox/Projects/heroku/cascadiaruby/"
+  alias cas="cd    ~/Dropbox/Projects/heroku/cascadia2012/"
   alias cbdb="cd   ~/Dropbox/Projects/heroku/cbdb/"
   alias de="cd     ~/Dropbox/Projects/heroku/dateedge/"
   alias dxe="cd    ~/Dropbox/Projects/heroku/dxe/"
@@ -134,6 +155,7 @@
   alias hel="cd    ~/Dropbox/Projects/heroku/helveticapaintings/"
   alias home="cd   ~/Dropbox/Projects/homesteading/"
   alias hr="cd     ~/Dropbox/Projects/heroku/hrrrthrrr/"
+  alias indah="cd  ~/Dropbox/Projects/heroku/indah"
   alias lt3="cd    ~/Dropbox/Projects/heroku/lessthanthree/"
   alias ltt="lt3"
   alias lyl="cd    ~/Dropbox/Projects/heroku/listyourlist/"
@@ -153,3 +175,5 @@
 
   alias ru="cd     ~/Dropbox/Projects/rubinius/"
   alias rbxday="cd ~/Dropbox/Projects/rubinius/rbxday"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
