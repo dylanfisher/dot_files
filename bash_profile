@@ -37,13 +37,10 @@ alias .....="cd ../../../.."
 
 # rails
 alias f3="foreman start -p 3000"
-alias p3="puma -p 3000"
-alias p4="puma -p 4000"
 alias be="bundle exec"
 alias dbm="rake db:migrate"
 alias nuke="rake db:drop:all && rake db:create:all && dbm"
 alias r="rails"
-alias s="server"
 alias seed="rake db:migrate && rake db:seed"
 alias test="rake test"
 alias nukeseed="nuke && seed"
